@@ -21,8 +21,8 @@ class App extends Component {
 
   generateThings = () => {
     const {url, requestBodyInput: requestBody} = this.state;
-    let queryParams = qsParse(url.substring(url.indexOf('?') + 1));
-    let bodyParams = JSON.parse(requestBody);
+    const queryParams = qsParse(url.substring(url.indexOf('?') + 1));
+    const bodyParams = JSON.parse(requestBody);
 
     this.setState({queryParams, bodyParams});
 

@@ -13,7 +13,13 @@ it('uses url to populate input', () => {
   const url = 'http://test.com';
   const wrapper = shallow(<UrlInput url={url} onChange={() => {}} />);
   expect(wrapper).toMatchSnapshot();
+});
 
-  wrapper.find('input[type="text"]').simulate('change', { target: { value: 'http' } });
-  expect(wrapper.state()).toEqual({ url: 'http' });
+it('calls onChange for text changes', () => {
+  const stub = jest.fn();
+  const wrapper = shallow(<UrlInput url={''} onChange={stub} />);
+
+  const event = { target: { value: 'http' } };
+  wrapper.find('input[type="text"]').simulate('change', event);
+  expect(stub.mock.calls[0][0]).toEqual(event);
 });
