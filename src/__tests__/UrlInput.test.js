@@ -21,5 +21,5 @@ it('calls onChange for text changes', () => {
 
   const event = { target: { value: 'http' } };
   wrapper.find('input[type="text"]').simulate('change', event);
-  expect(stub.mock.calls[0][0]).toEqual(event);
+  expect(stub).toBeCalledWith(event);
 });
