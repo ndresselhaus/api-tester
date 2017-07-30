@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders params and title for snapshot 1`] = `
+<div>
+  <h3>
+    Test Title
+  </h3>
+  <div>
+    <label>
+      a
+      <input
+        onChange={[Function]}
+        type="text"
+        value={1}
+      />
+    </label>
+  </div>
+  <div>
+    <label>
+      b
+      <input
+        onChange={[Function]}
+        type="text"
+        value="2"
+      />
+    </label>
+  </div>
+</div>
+`;

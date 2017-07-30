@@ -43,7 +43,22 @@ exports[`renders snapshots with shallow enzyme 1`] = `
         "padding": 5,
       }
     }
-  />
+  >
+    <ParameterList
+      onChange={[Function]}
+      title="Query Parameters"
+    />
+    <ParameterList
+      onChange={[Function]}
+      title="Body Parameters"
+    />
+  </div>
+  <div>
+    <HttpMethodInput
+      httpMethod="GET"
+      onChange={[Function]}
+    />
+  </div>
 </div>
 `;
 
@@ -98,5 +113,25 @@ exports[`renders with react-test-renderer 1`] = `
       }
     }
   />
+  <div>
+    <label>
+      Http Method
+      <select
+        onChange={[Function]}
+        value="GET"
+      >
+        <option
+          value="GET"
+        >
+          GET
+        </option>
+        <option
+          value="POST"
+        >
+          POST
+        </option>
+      </select>
+    </label>
+  </div>
 </div>
 `;
